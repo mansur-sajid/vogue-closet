@@ -1,0 +1,58 @@
+{
+    "products": [
+      {
+        "id": "SKU-FR1",
+        "name": "Mens 3XL Sneaker",
+        "imags": ["folder_name","img1", "img2","img3"],
+        "category" : "footwear"
+      },
+      {
+        "id": "SKU-FR2",
+        "name": "womens knife 10mm bootie in black",
+        "imags": ["folder_name","img1", "img2","img3"],
+        "category" : "footwear"
+      },
+      {
+        "id": "SKU-ST1",
+        "name": "woman's turtuleneck dress in black",
+        "imags": ["folder_name","img1", "img2","img3"],
+        "category" : "shirt"
+      },
+      {
+        "id": "SKU-FR3",
+        "name": "men's speed 2.0 lace-up sneaker in black",
+        "imags": ["folder_name","img1", "img2","img3"],
+        "category" : "footwear"
+      },
+      {
+        "id": "SKU-JT1",
+        "name": "unity sports icon puffer in black",
+        "imags": ["img1", "img2","img3"],
+        "category" : "jacket"
+      },
+      {
+        "id": "SKU-PT1",
+        "name": "deconstructed godet skirt",
+        "imags": ["img1", "img2","img3"],
+        "category" : "pant"
+      },
+      {
+        "id": "SKU-ST2",
+        "name": "unity sport icon log sleeve oversized t-shirt",
+        "imags": ["img1", "img2","img3"],
+        "category" : "shirt"
+      },
+      {
+        "id": "SKU-OR1",
+        "name": "mono cat 2.0 sunglasses in crystal",
+        "imags": ["img1", "img2","img3"],
+        "category" : "other"
+      },
+      {
+        "id": "SKU-OR2",
+        "name": "double holes belt in black",
+        "imags": ["img1", "img2","img3"],
+        "category" : "other"
+      }
+    ]
+  }

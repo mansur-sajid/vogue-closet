@@ -1,0 +1,39 @@
+.product-loader{
+    margin-top: 160px;
+}
+.product-image{ 
+    height: auto;
+    width: 100%;
+}
+.side-images{
+    display: flex;
+    height: 100px;
+}
+.click-state{
+    border: 1px solid black;
+}
+.display-image img{
+    transform: scale(1.1);
+    transform: scaleX(1.9);
+    transition: all 0.4s linear;
+    height: 100%;
+    width: 500px;
+}
+.display-image{
+    overflow: hidden;
+    height: 400px;
+    width: 500px;
+}
+
+@media screen and (max-width: 960px) {
+    .porduct-detail{
+        margin-top: 100px;
+    }
+    .display-image{
+        height: 250px;
+        width: 400px;
+    }
+    .display-image img{
+        transform: scaleX(1.1);
+    }
+}

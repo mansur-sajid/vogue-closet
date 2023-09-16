@@ -6,6 +6,12 @@
   height: 40vmin;
   pointer-events: none;
 }
+html{
+  scroll-behavior: smooth;
+}
+body{
+  margin-top: 170px;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -34,5 +40,10 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 960px) {
+  body{
+      margin-top: 100px;
   }
 }
