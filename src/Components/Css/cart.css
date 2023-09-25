@@ -1,0 +1,40 @@
+
+.product{
+    height: 200px;
+    background-color: white;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+#cartPage{
+    margin-top: -20px;
+    min-height: 200px;
+}
+.cart-image img{
+    margin-top: 50px;
+    transform: scale(2);   
+}
+.inputForQuantity{
+    width: 100px;
+    text-align: center;
+    margin: 0px 10px;
+}
+.deletebutton, .clearCart{
+    margin-top: 100px;
+    outline: none;
+}
+.deletebutton:focus, .clearCart:focus{
+    outline: none;
+}
+.clearCart{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+@media screen and (max-width: 500px){
+    .inputForQuantity{
+        width: 50px;
+        text-align: center;
+        margin: 0px 10px;
+    }
+}

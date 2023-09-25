@@ -35,7 +35,7 @@ function NavBar() {
   };
   return (
     <>
-      <div className=" navbar py-4">
+      <div className=" navbar py-4" >
         <div className="logo col-lg-12 col-11 text-center">
           <Link to={"/"} className="logo" onClick={newPage}>
             Vogue Closet
@@ -49,16 +49,16 @@ function NavBar() {
                 : "nav-links py-md-4"
             }
           >
+            <Link to={"/"} className="router-link" onClick={newPage}>
             <div
               className={query.matches || mobile ? "link text-center" : "link"}
             >
-              <Link to={"/"} className="router-link" onClick={newPage}>
                 Home
-              </Link>
               <i className='fas home-i'>&#xf061;</i>
             </div>
+            </Link>
             <div
-              className={query.matches || mobile ? "link text-center" : "link"}
+              className={query.matches || mobile ? "link text-center contact-link" : "link"}
               onClick={() => {
                 const section = document.querySelector(".footer");
                 section.scrollIntoView();
@@ -67,20 +67,22 @@ function NavBar() {
               Contact
               <i className='fas contact-i'>&#xf061;</i>
             </div>
+            <Link to={"/products"} className="router-link" onClick={newPage}>
             <div
               className={query.matches || mobile ? "link text-center" : "link"}
             >
-              <Link to={"/products"} className="router-link" onClick={newPage}>
                 Shop
-              </Link>
+              
               <i className='fas shop-i'>&#xf061;</i>
-            </div>
+            </div></Link>
+            <Link to={"/cart"} className="router-link" onClick={newPage}>
             <div
               className={query.matches || mobile ? "link text-center" : "link"}
             >
               Cart
               <i className='fas cart-i'>&#xf061;</i>
             </div>
+            </Link>
           </div>
         </div>
         <div className="click">

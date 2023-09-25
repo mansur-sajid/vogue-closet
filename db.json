@@ -3,56 +3,65 @@
       {
         "id": "SKU-FR1",
         "name": "Mens 3XL Sneaker",
-        "imags": ["folder_name","img1", "img2","img3"],
-        "category" : "footwear"
+        "category" : "footwear",
+        "optionstype" : "size",
+        "options" : ["39", "40", "41"]
       },
       {
         "id": "SKU-FR2",
         "name": "womens knife 10mm bootie in black",
-        "imags": ["folder_name","img1", "img2","img3"],
-        "category" : "footwear"
+        "category" : "footwear",
+        "optionstype" : "size",
+        "options" : ["41", "42", "43"]
       },
       {
         "id": "SKU-ST1",
         "name": "woman's turtuleneck dress in black",
-        "imags": ["folder_name","img1", "img2","img3"],
-        "category" : "shirt"
+        "category" : "shirt",
+        "optionstype" : "size",
+        "options" : [ "L", "M", "S"]
       },
       {
         "id": "SKU-FR3",
         "name": "men's speed 2.0 lace-up sneaker in black",
-        "imags": ["folder_name","img1", "img2","img3"],
-        "category" : "footwear"
+        "category" : "footwear",
+        "optionstype" : "size",
+        "options" : ["39", "42", "43"]
       },
       {
         "id": "SKU-JT1",
         "name": "unity sports icon puffer in black",
-        "imags": ["img1", "img2","img3"],
-        "category" : "jacket"
+        "category" : "jacket",
+        "optionstype" : "size",
+        "options" : ["L", "S"]
       },
       {
         "id": "SKU-PT1",
         "name": "deconstructed godet skirt",
-        "imags": ["img1", "img2","img3"],
-        "category" : "pant"
+        "category" : "pant",
+        "optionstype" : "size",
+        "options" : ["XXL", "L", "M"]
       },
       {
         "id": "SKU-ST2",
         "name": "unity sport icon log sleeve oversized t-shirt",
-        "imags": ["img1", "img2","img3"],
-        "category" : "shirt"
+        "category" : "shirt",
+        "optionstype" : "size",
+        "options" : ["XL", "L", "M", "S"]
       },
       {
         "id": "SKU-OR1",
         "name": "mono cat 2.0 sunglasses in crystal",
-        "imags": ["img1", "img2","img3"],
-        "category" : "other"
+        "category" : "other",
+        "optionstype" : "color",
+        "options" : ["white", "black", "red"]
       },
       {
         "id": "SKU-OR2",
-        "name": "double holes belt in black",
-        "imags": ["img1", "img2","img3"],
-        "category" : "other"
+        "name": "double holes belt",
+        "category" : "other",
+        "optionstype" : "color",
+        "options" : ["white", "black"]
       }
     ]
-  }
+}

@@ -11,6 +11,7 @@ body {
   background-color: white;
   box-shadow: 0px 5px 5px gray;
   height: 150px;
+  animation: fade-down 0.5s;
 }
 .logo {
   font-family: "Abril Fatface", cursive;
@@ -61,7 +62,7 @@ body {
 .router-link{
   color: black;
   position: relative;
-  top: -35px;
+  top: 0px;
   left: 0px;
 }
 .router-link:hover{
@@ -129,11 +130,15 @@ body {
   }
   .router-link{
     color: white;
-    top: 0;
-    left: 0;
+    top: 45px;
+    width: 95%;
+    bottom: 0px;
   }
   .router-link:hover{
     color: white;
+  }
+  .contact-link{
+    margin-top: auto;
   }
   .click {
     display: inline;
@@ -154,4 +159,13 @@ body {
     left: 70px;
   }
   
+}
+
+@keyframes fade-down {
+  0%{
+    transform: translateY(-200px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
 }

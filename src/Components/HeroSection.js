@@ -1,10 +1,11 @@
 import React from "react";
 import "./Css/HeroSection.css";
-import HeroImage from "../Images/hero1.jpg";
 import { Link } from "react-router-dom";
+import image from '../Images/hero1.jpg'
 
 function HeroSection() {
-  const newPage = () => window.scrollTo(0, 0);
+  const newPage = () => window.scrollTo(0, 0); 
+  window.addEventListener("load", newPage)
   return (
     <>
       <div className="container herosection col-12 py-4 text-white">
@@ -35,11 +36,11 @@ function HeroSection() {
               </button>
             </Link>
           </div>
-          <div className="col-lg-5">
-            <img src={HeroImage} className="img img-fluid" alt="SDFSFSd" />
+          <div className="image col-lg-6">
+            <img src={image} alt=""  className="img-fluid"/>
           </div>
         </div>
-      </div>
+      </div>
     </>
   );
 }
