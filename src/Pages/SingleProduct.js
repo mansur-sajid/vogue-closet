@@ -3,24 +3,26 @@ import { useParams } from "react-router-dom";
 import Loader from "../Components/Loader";
 import "../Components/Css/SingleProduct.css";
 import { useProduct } from "../Hooks/UseProduct";
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
 import Swal from "sweetalert2";
-import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+
+import { useSelector, useDispatch } from "react-redux";
+import { addItem } from "../ReduxFeatures/MyCart/MyCartSlice";
 
 function SingleProduct() {
-  const [option, setOption] = useState('');
-  var icon = useRef(null)
-
+  const [option, setOption] = useState("");
+  var icon = useRef(null);
+  const dispatch = useDispatch();
   const handleChange = (event) => {
     setOption(event.target.value);
   };
   var { id, category } = useParams();
-  var { data, isLoading } = useProduct(id);
+  const { data, isLoading } = useProduct(id);
+
   const [img, setImg] = useState(1);
   var clicked1 = useRef(null);
   var clicked2 = useRef(null);
@@ -34,7 +36,8 @@ function SingleProduct() {
       clicked1.current.style.opaticty = 1;
     } else {
       clicked1.current.style.border = "none";
-      clicked1.current.style.backgroundImage  = "linear-gradient(to bottom, rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.8) 100%)";
+      clicked1.current.style.backgroundImage =
+        "linear-gradient(to bottom, rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.8) 100%)";
     }
     if (image == 2) {
       clicked2.current.style.border = css;
@@ -126,35 +129,42 @@ function SingleProduct() {
           </p>
           <p>{data?.data?.optionstype}s:</p>
           <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
-        <InputLabel id="demo-simple-select-helper-label">{data?.data?.optionstype}</InputLabel>
-        <Select
-          labelId="demo-simple-select-helper-label"
-          id="demo-simple-select-helper"
-          value={option}
-          label="Age"
-          onChange={handleChange}
-        >
-          {
-            data?.data?.options.map(option=>{
-              return <MenuItem value={option}>{option}</MenuItem>
-            })
-          }
-        </Select>
-      </FormControl>
-      <button className="btn btn-dark mt-2 addToCartButton pl-0" onClick={(event)=>{
-        Swal.fire({
-          position: 'bottom-end',
-          icon: 'success',
-          customClass: 'swal-wide',
-          title: 'Product added to cart',
-          showConfirmButton: false,
-          timer: 1500
-        })
-        event.target.disabled = true
-        
-        
-        icon.current.classList.add("iconanimation")
-      }}>Add To Cart <ShoppingCartIcon className="cartbuttonicon" ref={icon}/> </button>
+            <InputLabel id="demo-simple-select-helper-label">
+              {data?.data?.optionstype}
+            </InputLabel>
+            <Select
+              labelId="demo-simple-select-helper-label"
+              id="demo-simple-select-helper"
+              value={option}
+              label="Age"
+              onChange={handleChange}
+            >
+              {data?.data?.options.map((option) => {
+                return <MenuItem value={option}>{option}</MenuItem>;
+              })}
+            </Select>
+          </FormControl>
+          <button
+            className="btn btn-dark mt-2 addToCartButton pl-0"
+            onClick={(event) => {
+              Swal.fire({
+                position: "bottom-end",
+                icon: "success",
+                customClass: "swal-wide",
+                title: "Product added to cart",
+                showConfirmButton: false,
+                timer: 1500,
+              });
+              event.target.disabled = true;
+              const name = data.data.name;
+              dispatch(addItem({ id, category, name }));
+
+              icon.current.classList.add("iconanimation");
+            }}
+          >
+            Add To Cart{" "}
+            <ShoppingCartIcon className="cartbuttonicon" ref={icon} />{" "}
+          </button>
         </div>
       </div>
     </>
